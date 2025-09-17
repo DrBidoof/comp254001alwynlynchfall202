@@ -1,49 +1,20 @@
-class Node:
-    """Lightweight, nonpublic class for storing a singly linked node."""
-    __slots__ = ("element", "next")
+from SinglyLinkedList import SinglyLinkedList
 
-    def __init__(self, element, next=None):
-        self.element = element      # data stored in this node
-        self.next = next            # link to the next node
+if __name__ == "__main__":
+    L = SinglyLinkedList()
+    nodes = []
 
-class SinglyLinkedList:
-    """Singly linked list with head and tail references."""
+    # Build list and keep references
+    for x in (1, 2, 3, 4, 5):
+        L.add_last(x)
+        if L.tail:  # store actual Node references
+            nodes.append(L.tail)
 
-    def __init__(self):
-        self.head = None
-        self.tail = None
-        self.size = 0
+    print("Before swap:")
+    print(L)
 
-    def __len__(self):
-        return self.size
+    # Swap node 2 and node 4
+    L.swapNodes(nodes[1], nodes[3])
 
-    def is_empty(self):
-        return self.size == 0
-
-    def add_first(self, e):
-        """Insert element at the beginning."""
-        newest = Node(e, self.head)
-        self.head = newest
-        if self.size == 0:
-            self.tail = newest
-        self.size += 1
-
-    def add_last(self, e):
-        """Insert element at the end."""
-        newest = Node(e, None)
-        if self.is_empty():
-            self.head = newest
-        else:
-            self.tail.next = newest
-        self.tail = newest
-        self.size += 1
-
-    def __iter__(self):
-        cursor = self.head
-        while cursor:
-            yield cursor.element
-            cursor = cursor.next
-
-    def __repr__(self):
-        return f"SinglyLinkedList([{', '.join(repr(x) for x in self)}])"
-
+    print("\nAfter swap (2 <-> 4):")
+    print(L)
