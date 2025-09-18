@@ -4,11 +4,10 @@ if __name__ == "__main__":
     L = SinglyLinkedList()
     nodes = []
 
-    # Build list and keep references
+    # Build list and keep node references
     for x in (1, 2, 3, 4, 5):
-        L.add_last(x)
-        if L.tail:  # store actual Node references
-            nodes.append(L.tail)
+        node = L.add_last(x)
+        nodes.append(node)
 
     print("Before swap:")
     print(L)
