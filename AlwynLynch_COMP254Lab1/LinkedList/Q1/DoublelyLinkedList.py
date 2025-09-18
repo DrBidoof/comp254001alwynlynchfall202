@@ -1,18 +1,16 @@
-class Node:
-    __slots__ = ("element", "prev", "next")
-
-    def __init__(self, element=None, prev=None, next=None):
-        self.element = element
-        self.prev = prev
-        self.next = next
-
-
 class DoublyLinkedList:
     """Doubly linked list with header/trailer sentinels."""
 
+    class _Node:
+        __slots__ = ("element", "prev", "next")
+        def __init__(self, element=None, prev=None, next=None):
+            self.element = element
+            self.prev = prev
+            self.next = next
+
     def __init__(self):
-        self.header = Node()               # sentinel at front
-        self.trailer = Node()              # sentinel at back
+        self.header = self._Node()               # sentinel at front
+        self.trailer = self._Node()              # sentinel at back
         self.header.next = self.trailer
         self.trailer.prev = self.header
         self.size = 0
@@ -25,7 +23,7 @@ class DoublyLinkedList:
 
     def _insert_between(self, e, predecessor, successor):
         """Insert element e between two existing nodes."""
-        newest = Node(e, predecessor, successor)
+        newest = self._Node(e, predecessor, successor)
         predecessor.next = newest
         successor.prev = newest
         self.size += 1
@@ -38,7 +36,9 @@ class DoublyLinkedList:
         succ.prev = pred
         self.size -= 1
         elem = node.element
-        node.prev = node.next = node.element = None
+        # help GC
+        node.prev = node.next = None
+        node.element = None
         return elem
 
     def add_first(self, e):
@@ -66,7 +66,7 @@ class DoublyLinkedList:
     def __repr__(self):
         return f"DoublyLinkedList([{', '.join(repr(x) for x in self)}])"
 
-    def concatenate(self, other):
+    def concatenate(self, other: "DoublyLinkedList"):
         """Concatenate list 'other' to the end of this list."""
         if other.is_empty():
             return
@@ -75,14 +75,15 @@ class DoublyLinkedList:
         first_M = other.header.next
         last_M = other.trailer.prev
 
+        # splice
         last_L.next = first_M
         first_M.prev = last_L
-
         self.trailer.prev = last_M
         last_M.next = self.trailer
 
         self.size += other.size
 
+        # clear 'other'
         other.header.next = other.trailer
         other.trailer.prev = other.header
         other.size = 0
