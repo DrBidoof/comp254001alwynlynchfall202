@@ -74,10 +74,12 @@ class SinglyLinkedList:
 
     def swapNodes(self, node1, node2):
         """Swap two nodes given their node references (swap links, not data)."""
+        if node1 is None or node2 is None:
+            raise ValueError("Cannot swap None nodes.")
         if node1 is node2:
             return  # nothing to do
 
-        # Find previous nodes of node1 and node2
+        # Find previous nodes
         prev1 = prev2 = None
         curr = self.head
         while curr and (prev1 is None or prev2 is None):
@@ -87,28 +89,43 @@ class SinglyLinkedList:
                 prev2 = curr
             curr = curr.next
 
-        # If either node isn't present, do nothing
-        # (Also covers case where list is empty or nodes never found)
+        # Ensure both nodes are in the list
         if (node1 is not self.head and prev1 is None) or (node2 is not self.head and prev2 is None):
-            return
+            return  # nodes not in this list
 
-        # If node1 is not head, link its previous to node2; else move head
-        if prev1:
-            prev1.next = node2
+        # Case: node1 is immediately before node2
+        if node1.next is node2:
+            if prev1:
+                prev1.next = node2
+            else:
+                self.head = node2
+            node1.next = node2.next
+            node2.next = node1
+
+        # Case: node2 is immediately before node1
+        elif node2.next is node1:
+            if prev2:
+                prev2.next = node1
+            else:
+                self.head = node1
+            node2.next = node1.next
+            node1.next = node2
+
+        # General non-adjacent case
         else:
-            self.head = node2
-
-        # If node2 is not head, link its previous to node1; else move head
-        if prev2:
-            prev2.next = node1
-        else:
-            self.head = node1
-
-        # Swap next pointers
-        node1.next, node2.next = node2.next, node1.next
+            if prev1:
+                prev1.next = node2
+            else:
+                self.head = node2
+            if prev2:
+                prev2.next = node1
+            else:
+                self.head = node1
+            node1.next, node2.next = node2.next, node1.next
 
         # Fix tail if needed
         if node1.next is None:
             self.tail = node1
-        if node2.next is None:
+        elif node2.next is None:
             self.tail = node2
+

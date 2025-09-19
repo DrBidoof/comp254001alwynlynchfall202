@@ -70,6 +70,8 @@ class DoublyLinkedList:
         """Concatenate list 'other' to the end of this list."""
         if other.is_empty():
             return
+        if other is self:
+            raise ValueError("Cannot concatenate a list with itself.")
 
         last_L = self.trailer.prev
         first_M = other.header.next
