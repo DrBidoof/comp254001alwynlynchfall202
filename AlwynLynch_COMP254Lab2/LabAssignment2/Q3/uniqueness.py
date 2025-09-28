@@ -29,12 +29,3 @@ def unique2(data: List[int]) -> bool:
     return True                 # if we reach this, elements are unique
 
 
-# Example usage / quick test
-if __name__ == "__main__":
-    arr1 = [1, 2, 3, 4]
-    arr2 = [1, 2, 3, 1]
-
-    print("unique1(arr1):", unique1(arr1))  # True
-    print("unique1(arr2):", unique1(arr2))  # False
-    print("unique2(arr1):", unique2(arr1))  # True
-    print("unique2(arr2):", unique2(arr2))  # False

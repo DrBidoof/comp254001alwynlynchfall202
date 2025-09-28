@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36511.14 d17.14
+VisualStudioVersion = 17.14.36511.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LabAssignment2", "LabAssignment2\LabAssignment2.pyproj", "{442FFCDE-77CB-4B16-90C5-CF835B5253F7}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Q1&2ANS", "LabAssignment2\Q1&2ANS.pyproj", "{442FFCDE-77CB-4B16-90C5-CF835B5253F7}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Q3", "Q3\Q3.pyproj", "{618E74C8-B01C-4AA8-9B23-4408E4E106B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{442FFCDE-77CB-4B16-90C5-CF835B5253F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{442FFCDE-77CB-4B16-90C5-CF835B5253F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618E74C8-B01C-4AA8-9B23-4408E4E106B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618E74C8-B01C-4AA8-9B23-4408E4E106B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

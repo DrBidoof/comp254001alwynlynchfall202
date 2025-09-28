@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>442ffcde-77cb-4b16-90c5-cf835b5253f7</ProjectGuid>
+    <ProjectGuid>618e74c8-b01c-4aa8-9b23-4408e4e106b9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LabAssignment2.py</StartupFile>
+    <StartupFile>Q3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>LabAssignment2</Name>
-    <RootNamespace>LabAssignment2</RootNamespace>
+    <Name>Q3</Name>
+    <RootNamespace>Q3</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="LabAssignment2.py" />
+    <Compile Include="Q3.py" />
+    <Compile Include="uniqueness.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
