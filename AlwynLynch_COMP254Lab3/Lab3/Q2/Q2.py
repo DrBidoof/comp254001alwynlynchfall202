@@ -12,3 +12,4 @@ if __name__ == "__main__":
     tests = ["racecar", "abba", "abc", "gohangasalamiimalasagnahog"]
     for t in tests:
         print(f"Q2 is_palindrome({t!r}) -> {is_palindrome(t)}")
+        # Q2 demo
