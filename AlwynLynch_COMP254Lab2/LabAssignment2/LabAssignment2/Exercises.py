@@ -24,7 +24,7 @@ def example3(arr: List[int]) -> int:
     Returns the sum of the prefix sums of given array.
     Mirrors the Java version exactly: inner loop adds arr[j] (not arr[k]).
     """
-    n = len(arr)                  # 3
+    n = len(arr)                  # 2
     total = 0                     # 1
     for j in range(n):            # 1 + n +n = 2n +1
         for k in range(j + 1):    # n² + 2n used AP sum formula
