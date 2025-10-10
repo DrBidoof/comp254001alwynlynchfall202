@@ -38,7 +38,7 @@ def find(path: str | Path, filename: str) -> list[Path]:
     return results
 
 if __name__ == "__main__":
-    # Example: look inside your Medical Books\Surgery folder for a file
+    # Example: look inside your Books\SQL
     path = r"C:\Users\dartb\OneDrive\Documents\health infomatics\Books\SQL"
     filename = "sqlsingleRowFunctions.pdf"
     matches = find(path, filename)
