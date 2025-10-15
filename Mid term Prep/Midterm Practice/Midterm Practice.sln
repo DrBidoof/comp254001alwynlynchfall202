@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Midterm Practice", "Midterm Practice\Midterm Practice.pyproj", "{C9972679-F205-42F5-9CFB-A0B0475D5EC3}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "recursion", "PythonApplication1\recursion.pyproj", "{4B8FAE9D-77EA-4773-BAFE-A5D80C9B9B4C}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "findRepeatedInt", "findRepeatedInt\findRepeatedInt.pyproj", "{903A9CED-2980-4DF4-9428-F51D6CF0C6AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9972679-F205-42F5-9CFB-A0B0475D5EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9972679-F205-42F5-9CFB-A0B0475D5EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8FAE9D-77EA-4773-BAFE-A5D80C9B9B4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8FAE9D-77EA-4773-BAFE-A5D80C9B9B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903A9CED-2980-4DF4-9428-F51D6CF0C6AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903A9CED-2980-4DF4-9428-F51D6CF0C6AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A68DA7B1-6F77-4CEF-AB8D-E2EB0CC7E371}
+	EndGlobalSection
+EndGlobal
