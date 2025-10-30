@@ -39,7 +39,7 @@ def find(path: str | Path, filename: str) -> list[Path]:
 
 if __name__ == "__main__":
     # Example: look inside your Books\SQL
-    path = r"C:\Users\dartb\OneDrive\Documents\health infomatics\Books\SQL"
+    path = r"C:\Users\dartb\OneDrive\Documents\health infomatics\Books"
     filename = "sqlsingleRowFunctions.pdf"
     matches = find(path, filename)
     if matches:

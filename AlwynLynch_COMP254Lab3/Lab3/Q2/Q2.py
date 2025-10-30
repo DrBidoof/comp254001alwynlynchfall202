@@ -1,12 +1,12 @@
-def is_palindrome(s: str) -> bool:
+def is_palindrome(myword: str) -> bool:
     """
     Returns True if s is a palindrome (exact, case-sensitive).
     """
-    if len(s) <= 1:
-        return True
-    if s[0] != s[-1]:
-        return False
-    return is_palindrome(s[1:-1])
+    if len(myword) <= 1:
+        return True # base case
+    if myword[0] != myword[-1]:
+        return False # base case
+    return is_palindrome(myword[1:-1])
 
 if __name__ == "__main__":
     tests = ["racecar", "abba", "abc", "gohangasalamiimalasagnahog"]
