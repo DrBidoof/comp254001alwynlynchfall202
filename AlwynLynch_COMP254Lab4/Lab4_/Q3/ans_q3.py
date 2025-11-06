@@ -16,7 +16,7 @@ class AnswerLinkedQueue(LinkedQueue):
             self._size = Q2._size
         else:
             # Link tails/heads directly
-            self._tail.next = Q2._head  # type: ignore
+            self._tail.next = Q2._head  
             self._tail = Q2._tail
             self._size += Q2._size
 
