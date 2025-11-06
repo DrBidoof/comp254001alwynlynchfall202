@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import Any 
-
+# textbook code
 class ArrayStack:
     """Simple stack backed by a Python list."""
     def __init__(self) -> None:

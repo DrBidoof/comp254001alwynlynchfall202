@@ -29,7 +29,7 @@ class PositionalList:
                 and self._node is other._node
             )
 
-    # ---------------- core structure ----------------
+    # code from textbook
     def __init__(self) -> None:
         self._header = self._Node(None)
         self._trailer = self._Node(None)
