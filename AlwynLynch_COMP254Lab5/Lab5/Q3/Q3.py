@@ -1,22 +1,21 @@
-# bt_node.py
-from __future__ import annotations
-from dataclasses import dataclass
-from typing import Optional, Any
+# q3_driver.py
+from q3_heap import HeapPriorityQueue
 
-@dataclass
-class BTNode:
-    key: Any
-    left: Optional["BTNode"] = None
-    right: Optional["BTNode"] = None
-    parent: Optional["BTNode"] = None
+def main():
+    print("Building heap with (key,value):")
+    items = [(5, "E"), (3, "C"), (7, "G"), (1, "A"), (4, "D"), (2, "B")]
+    pq = HeapPriorityQueue()
+    for k, v in items:
+        print(f"  add({k}, {v})")
+        pq.add(k, v)
 
-    def set_left(self, child: Optional["BTNode"]) -> None:
-        self.left = child
-        if child:
-            child.parent = self
+    print("\nPeek min():", pq.min())
 
-    def set_right(self, child: Optional["BTNode"]) -> None:
-        self.right = child
-        if child:
-            child.parent = self
+    popped = []
+    while not pq.is_empty():
+        popped.append(pq.remove_min())
+    print("remove_min() order:", popped)
+    # Expect ascending by key: [(1,'A'), (2,'B'), (3,'C'), (4,'D'), (5,'E'), (7,'G')]
 
+if __name__ == "__main__":
+    main()
