@@ -5,7 +5,7 @@
     <ProjectGuid>99609632-9849-400e-ab13-7e334307fbb7</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Lab5.py</StartupFile>
+    <StartupFile>demo.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Lab5.py" />
+    <Compile Include="bt_node.py" />
+    <Compile Include="traversal_next.py" />
+    <Compile Include="demo.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
