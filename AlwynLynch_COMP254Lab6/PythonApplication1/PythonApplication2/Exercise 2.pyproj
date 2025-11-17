@@ -22,8 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="class1.py" />
-    <Compile Include="class2.py" />
+    <Compile Include="map_base.py" />
+    <Compile Include="sorted_table_map.py" />
+    <Compile Include="Sorted_Table_Map_Solution.py" />
     <Compile Include="demo.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
