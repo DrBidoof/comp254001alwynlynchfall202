@@ -15,7 +15,7 @@ def inorder_next(p: Optional[BTNode]) -> Optional[BTNode]:
     if p.right:
         return _leftmost(p.right)
     cur = p
-    while cur.parent and cur is cur.parent.right:
+    while cur.parent and cur is cur.parent.right:  # check root and check right child of its parent
         cur = cur.parent
     return cur.parent
 
@@ -37,7 +37,7 @@ def preorder_next(p: Optional[BTNode]) -> Optional[BTNode]:
 def postorder_next(p: Optional[BTNode]) -> Optional[BTNode]:
     """Return the node visited after p in a postorder traversal, or None if last."""
     if p is None or p.parent is None:
-        return None  # root is last in postorder
+        return None  # root is last in postorder 
     u = p.parent
     if p is u.left and u.right:
         return _first_postorder(u.right)

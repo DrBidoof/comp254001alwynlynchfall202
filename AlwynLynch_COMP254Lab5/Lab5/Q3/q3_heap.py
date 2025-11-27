@@ -42,7 +42,7 @@ class HeapPriorityQueue:
 
     # recursive downheap
     def _downheap(self, j: int) -> None:
-        if not self._has_left(j):
+        if not self._has_left(j):   #check left side
             return
         left = self._left(j)
         small = left
@@ -50,7 +50,7 @@ class HeapPriorityQueue:
             right = self._right(j)
             if self._data[right] < self._data[left]:
                 small = right
-        if self._data[small] < self._data[j]:
+        if self._data[small] < self._data[j]:  #compare child to parent
             self._swap(j, small)
             self._downheap(small)
 

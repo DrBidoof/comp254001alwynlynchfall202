@@ -18,7 +18,7 @@ def compute_and_print_heights(root: Optional[GNode]) -> Dict[GNode, int]:
             h = 0
         else:
             h = 1 + max(post(c) for c in x.children)
-        heights[x] = h
+        heights[x] = h # Store computed height
         # Friendly I/O: print element followed by computed height (during postorder)
         print(f"{x.elem} {h}")
         return h
