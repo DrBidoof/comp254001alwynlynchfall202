@@ -11,5 +11,5 @@ class SortedTableMapSolution(SortedTableMap):
         if n == 0:
             return False
 
-        j = self._find_index(k, 0, n - 1)
-        return j != n and self._table[j]._key == k
+        j = self._find_index(k, 0, n - 1) #position
+        return j != n and self._table[j]._key == k #key found
